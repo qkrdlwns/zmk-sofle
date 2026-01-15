@@ -8,7 +8,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/rgb.h>
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
@@ -35,6 +34,15 @@
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
         tap-ms = <100>;
+    };
+
+    scroll_encoder_v: scroll_encoder_v {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+
+        tap-ms = <100>;
+        label = "SCROLL_ENCODER_V";
     };
 
     behaviors {
@@ -81,11 +89,11 @@
 
         Fn1 {
             bindings = <
-&kp F1         &kp F2           &kp F3          &kp F4           &kp F5            &kp F6             &mmv MOVE_UP     &kp F7           &kp F8      &kp F9    &kp F10    &kp F11               &kp F12
-&trans         &trans           &mkp LCLK       &mkp MCLK        &mkp RCLK         &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END     &kp UP    &kp HOME   &kp MINUS             &kp EQUAL
-&kp RG(SPACE)  &sk LEFT_GUI     &sk LEFT_ALT    &sk LEFT_SHIFT   &sk LEFT_CONTROL  &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT    &kp DOWN  &kp RIGHT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&trans         &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR   &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &kp PRINTSCREEN  &kp INSERT  &trans    &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp C_MUTE     &trans           &trans          &trans           &trans            &trans             &mkp LCLK        &trans           &trans      &trans    &trans     &trans
+&trans      &kp F1        &kp F2        &kp F3             &kp F4            &kp F5            &mmv MOVE_UP     &kp F6           &kp F7       &kp F8         &kp F9     &kp F10               &kp INSERT
+&trans      &sk LEFT_GUI  &sk LEFT_ALT  &sk LEFT_SHIFT     &sk LEFT_CONTROL  &kt LEFT_SHIFT    &mmv MOVE_DOWN   &kp F11          &kp HOME     &kp UP         &kp END    &kp MINUS             &kp EQUAL
+&trans      &mkp MB4      &mkp MCLK     &mkp RCLK          &mkp LCLK         &mkp MB5          &mmv MOVE_LEFT   &kp F12          &kp LEFT     &kp DOWN       &kp RIGHT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&trans      &kp ENTER     &kp SPACE     &kp K_APPLICATION  &kp LANGUAGE_1    &tog 4            &mmv MOVE_RIGHT  &kp PRINTSCREEN  &kp PAGE_UP  &kp PAGE_DOWN  &kp GRAVE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&kp C_MUTE  &trans        &trans        &trans             &trans            &trans            &mkp LCLK        &trans           &trans       &trans         &trans     &trans
             >;
 
             display-name = "layer1";
@@ -95,16 +103,40 @@
 
         Fn2 {
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8   &kp F9     &kp F10        &trans
-&trans  &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &kp F11  &kp F12    &kp UNDER      &kp PLUS
-&trans  &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans   &trans     &kp LBRC       &kp RBRC
-&trans  &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &trans   &kp TILDE  &kp LESS_THAN  &kp GREATER_THAN
-&trans  &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans   &trans     &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &msc SCRL_UP     &kp F6  &kp F7  &kp F8   &kp F9     &kp F10        &trans
+&trans  &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &msc SCRL_DOWN   &trans  &trans  &kp F11  &kp F12    &kp UNDER      &kp PLUS
+&trans  &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &msc SCRL_LEFT   &trans  &trans  &trans   &trans     &kp LBRC       &kp RBRC
+&trans  &sys_reset    &trans          &bootloader   &trans        &trans          &msc SCRL_RIGHT  &trans  &trans  &trans   &kp TILDE  &kp LESS_THAN  &kp GREATER_THAN
+&trans  &trans        &trans          &trans        &trans        &trans          &none            &trans  &trans  &trans   &trans     &trans
             >;
 
             display-name = "layer2";
             sensor-bindings = <&scroll_encoder>;
             label = "Fn2";
+        };
+
+        MouseMode {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "MouseMode";
+        };
+
+        BIOS_RGB {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "BIOS_RGB";
         };
 
         layer_3 {
