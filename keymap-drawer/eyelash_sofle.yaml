@@ -199,15 +199,15 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - F13
   - F14
-  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '4', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '5', s: '$$mdi:bluetooth-connect$$'}
+  - F15
+  - F16
+  - F17
   - $$mdi:pan-up$$
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
+  - F18
+  - F19
+  - F20
+  - F21
+  - F22
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:bluetooth-off$$
