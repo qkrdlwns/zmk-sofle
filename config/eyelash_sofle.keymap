@@ -230,6 +230,7 @@
             >;
 
             label = "FLStudio1";
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOLUME_DOWN>;
         };
 
         FLStudio2 {
@@ -242,6 +243,7 @@
             >;
 
             label = "FLStudio2";
+            sensor-bindings = <&scroll_encoder>;
         };
 
         FLStudio3 {
