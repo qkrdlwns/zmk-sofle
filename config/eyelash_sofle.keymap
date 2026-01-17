@@ -57,6 +57,15 @@
         };
     };
 
+    macros {
+        Macro_FLStudio_key2midi: Macro_FLStudio_key2midi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 14 &kp LC(T)>;
+            label = "MACRO_FLSTUDIO_KEY2MIDI";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -213,11 +222,11 @@
 
         FLStudio1 {
             bindings = <
-&trans   &trans     &trans     &trans     &trans         &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans   &trans     &trans     &trans     &kp LC(LA(Z))  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp DEL  &kp S      &kp C      &kp B      &kp P          &kp M     &none   &trans  &trans  &trans  &trans  &trans  &trans
-&trans   &kp LC(X)  &kp LC(C)  &kp LC(D)  &kp LC(V)      &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&tog 12  &trans     &trans     &trans     &lt 13 SPACE   &mo 14    &trans  &trans  &trans  &trans  &trans  &trans
+&kp ESC         &trans            &trans     &trans        &trans         &trans                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &kp LC(S)         &trans     &trans        &kp LC(LA(Z))  &kp LC(T)                   &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp DEL         &kp S             &kp C      &kp B         &kp P          &kp M                       &none   &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp DEL           &kp LC(B)  &kp LC(C)     &kp LC(V)      &trans                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&tog 12         &sk LEFT_CONTROL  &trans     &kp LEFT_ALT  &lt 13 SPACE   &Macro_FLStudio_key2midi    &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "FLStudio1";
@@ -225,11 +234,11 @@
 
         FLStudio2 {
             bindings = <
-&trans  &kp F5  &kp F6  &kp F7  &kp F9  &kp F12    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F5     &kp F6     &kp F7     &kp F9     &kp F12      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LC(Q)  &kp LA(R)  &kp LA(S)  &kp LC(L)  &kp LC(A)    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans     &trans     &trans       &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "FLStudio2";
@@ -237,11 +246,11 @@
 
         FLStudio3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                      &kp N5  &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &trans
+&trans  &kp Q   &kp W   &kp E   &kp R   &kp T                       &kp Y   &kp Y   &kp U   &kp I      &kp O    &kp P     &trans
+&trans  &kp A   &kp S   &kp D   &kp F   &kp G                       &kp G   &kp H   &kp J   &kp K      &kp L    &kp SEMI  &trans
+&trans  &kp Z   &kp X   &kp C   &kp V   &kp B                       &kp N   &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
+&trans  &trans  &trans  &trans  &trans  &Macro_FLStudio_key2midi    &trans  &trans  &trans  &trans     &trans   &trans
             >;
 
             label = "FLStudio3";
