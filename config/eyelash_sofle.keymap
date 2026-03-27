@@ -1,5 +1,5 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 400  // 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 10   // 10
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -9,20 +9,21 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-&mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
+&mmv_input_listener { input-processors = <&zip_xy_scaler 1 1>; };
 
-&msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
+&msc_input_listener { input-processors = <&zip_scroll_scaler 1 1>; };
 
 &msc {
-    acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <100>;       // 300
+    acceleration-exponent = <0>;      // 0
+    time-to-max-speed-ms = <0>;       // 300
     delay-ms = <0>;                   // 0
+    trigger-period-ms = <8>; // none
 };
 
 &mmv {
-    time-to-max-speed-ms = <500>;
-    acceleration-exponent = <1>;
-    trigger-period-ms = <16>;
+    time-to-max-speed-ms = <0>;
+    acceleration-exponent = <0>;
+    trigger-period-ms = <8>; // 16
 };
 
 &soft_off { hold-time-ms = <2000>; };
@@ -33,7 +34,7 @@
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
-        tap-ms = <100>;
+        tap-ms = <20>;
     };
 
     scroll_encoder_v: scroll_encoder_v {
@@ -41,7 +42,7 @@
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
 
-        tap-ms = <100>;
+        tap-ms = <20>;
         label = "SCROLL_ENCODER_V";
     };
 
