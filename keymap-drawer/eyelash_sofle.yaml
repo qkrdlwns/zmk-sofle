@@ -411,7 +411,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - KP COMMA
+  - KP NUMLOCK
   - KP 7
   - KP 8
   - KP 9
