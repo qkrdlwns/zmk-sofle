@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 400  // 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 10   // 10
 
 #include <input/processors.dtsi>
@@ -17,13 +17,13 @@
     acceleration-exponent = <0>;      // 0
     time-to-max-speed-ms = <0>;       // 300
     delay-ms = <0>;                   // 0
-    trigger-period-ms = <8>; // none
+    trigger-period-ms = <16>; // none
 };
 
 &mmv {
     time-to-max-speed-ms = <0>;
     acceleration-exponent = <0>;
-    trigger-period-ms = <8>; // 16
+    trigger-period-ms = <16>; // 16
 };
 
 &soft_off { hold-time-ms = <2000>; };
@@ -34,7 +34,7 @@
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
-        tap-ms = <20>;
+        tap-ms = <100>;
     };
 
     scroll_encoder_v: scroll_encoder_v {
@@ -42,7 +42,7 @@
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
 
-        tap-ms = <20>;
+        tap-ms = <100>;
         label = "SCROLL_ENCODER_V";
     };
 
@@ -152,7 +152,7 @@
         layer_numpad {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &none         &none            &none      &none            &kp KP_LEFT_PARENTHESIS  &kp KP_RIGHT_PARENTHESIS
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_COMMA  &kp KP_N7        &kp KP_N8  &kp KP_N9        &kp KP_ENTER             &kp KP_NUMLOCK
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMLOCK  &kp KP_N7        &kp KP_N8  &kp KP_N9        &kp KP_ENTER             &kp KP_NUMLOCK
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_N0     &kp KP_NUMBER_4  &kp KP_N5  &kp KP_NUMBER_6  &kp KP_PLUS              &kp KP_MINUS
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_DOT    &kp KP_N1        &kp KP_N2  &kp KP_N3        &kp KP_MULTIPLY          &kp KP_DIVIDE
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans           &trans     &trans           &trans
