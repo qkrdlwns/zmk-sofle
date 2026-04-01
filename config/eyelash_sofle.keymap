@@ -150,11 +150,11 @@
 
         layer_numpad {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp ESCAPE  &kp TAB          &kp SPACE  &none            &kp BACKSPACE    &kp LEFT_SHIFT
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp COMMA   &kp KP_N7        &kp KP_N8  &kp KP_N9        &kp KP_ENTER     &kp KP_NUMLOCK
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_DOT  &kp KP_NUMBER_4  &kp KP_N5  &kp KP_NUMBER_6  &kp KP_PLUS      &kp KP_MINUS
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_N0   &kp KP_N1        &kp KP_N2  &kp KP_N3        &kp KP_MULTIPLY  &kp KP_DIVIDE
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans           &trans     &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp ESCAPE      &kp TAB          &kp SPACE  &none            &kp BACKSPACE    &kp LEFT_SHIFT
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMLOCK  &kp KP_N7        &kp KP_N8  &kp KP_N9        &kp KP_PLUS      &kp KP_MINUS
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp COMMA       &kp KP_NUMBER_4  &kp KP_N5  &kp KP_NUMBER_6  &kp KP_N0        &kp KP_DOT
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_ENTER    &kp KP_N1        &kp KP_N2  &kp KP_N3        &kp KP_MULTIPLY  &kp KP_DIVIDE
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans           &trans     &trans           &trans
             >;
 
             display-name = "NumpadMode";
