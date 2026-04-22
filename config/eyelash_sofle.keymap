@@ -100,8 +100,8 @@
             bindings = <
 &trans      &kp F1        &kp F2        &kp F3             &kp F4            &kp F5            &mmv MOVE_UP     &kp F6           &kp F7       &kp F8         &kp F9     &kp F10               &kp INSERT
 &trans      &sk LEFT_GUI  &sk LEFT_ALT  &sk LEFT_SHIFT     &sk LEFT_CONTROL  &kt LEFT_SHIFT    &mmv MOVE_DOWN   &kp F11          &kp HOME     &kp UP         &kp END    &kp MINUS             &kp EQUAL
-&trans      &mkp MB4      &mkp MCLK     &mkp RCLK          &mkp LCLK         &mkp MB5          &mmv MOVE_LEFT   &kp F12          &kp LEFT     &kp DOWN       &kp RIGHT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&trans      &kp ENTER     &kp SPACE     &kp K_APPLICATION  &kp LANGUAGE_1    &mo 6             &mmv MOVE_RIGHT  &kp PRINTSCREEN  &kp PAGE_UP  &kp PAGE_DOWN  &kp GRAVE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&trans      &none         &none         &none              &none             &tog 4            &mmv MOVE_LEFT   &kp F12          &kp LEFT     &kp DOWN       &kp RIGHT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&trans      &kp ENTER     &kp SPACE     &kp K_APPLICATION  &kp LANGUAGE_1    &tog 6            &mmv MOVE_RIGHT  &kp PRINTSCREEN  &kp PAGE_UP  &kp PAGE_DOWN  &kp GRAVE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
 &kp C_MUTE  &trans        &trans        &trans             &trans            &trans            &none            &trans           &trans       &trans         &trans     &trans
             >;
 
@@ -126,14 +126,15 @@
 
         layer_mouse_mode {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &none      &none           &none           &none            &none       &none
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &none      &mkp MB4        &mmv MOVE_UP    &mkp MB5         &none       &none
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none       &none
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &none      &kp LC(C)       &kp LC(X)       &kp LC(Z)        &kp LSHIFT  &none
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &none      &none           &none           &none            &none         &none
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &none      &mkp MB4        &mmv MOVE_UP    &mkp MB5         &kp LEFT_ALT  &none
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp LCTRL     &tog 4
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &none      &kp LC(C)       &kp LC(X)       &kp LC(Z)        &kp LSHIFT    &none
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &mkp MCLK  &mkp LCLK       &mkp RCLK       &none            &none
             >;
 
             label = "MouseMode";
+            sensor-bindings = <&scroll_encoder>;
         };
 
         layer_bios_rgb {
@@ -150,11 +151,11 @@
 
         layer_numpad {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp ESCAPE      &kp TAB          &kp SPACE  &none            &kp BACKSPACE    &kp LEFT_SHIFT
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMLOCK  &kp KP_N7        &kp KP_N8  &kp KP_N9        &kp KP_PLUS      &kp KP_MINUS
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp COMMA       &kp KP_NUMBER_4  &kp KP_N5  &kp KP_NUMBER_6  &kp KP_N0        &kp KP_DOT
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_ENTER    &kp KP_N1        &kp KP_N2  &kp KP_N3        &kp KP_MULTIPLY  &kp KP_DIVIDE
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans           &trans     &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp ESCAPE      &kp TAB          &kp SPACE     &none            &kp BACKSPACE    &kp LEFT_SHIFT
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMLOCK  &kp KP_N7        &kp KP_N8     &kp KP_N9        &kp KP_PLUS      &kp KP_MINUS
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp COMMA       &kp KP_NUMBER_4  &kp KP_N5     &kp KP_NUMBER_6  &kp KP_N0        &tog 6
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_DOT      &kp KP_N1        &kp KP_N2     &kp KP_N3        &kp KP_MULTIPLY  &kp KP_DIVIDE
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans           &kp KP_ENTER  &trans           &trans
             >;
 
             display-name = "NumpadMode";
