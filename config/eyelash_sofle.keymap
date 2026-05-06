@@ -96,7 +96,8 @@
                 <&macro_press>,
                 <&mmv MOVE_UP &mmv MOVE_LEFT>,
                 <&macro_pause_for_release>,
-                <&macro_release>;
+                <&macro_release>,
+                <&mmv MOVE_UP &mmv MOVE_LEFT>;
 
             label = "MACRO_DIAGONAL_UL";
         };
@@ -108,7 +109,8 @@
                 <&macro_press>,
                 <&mmv MOVE_UP &mmv MOVE_RIGHT>,
                 <&macro_pause_for_release>,
-                <&macro_release>;
+                <&macro_release>,
+                <&mmv MOVE_UP &mmv MOVE_RIGHT>;
 
             label = "MACRO_DIAGONAL_UR";
         };
@@ -120,7 +122,8 @@
                 <&macro_press>,
                 <&mmv MOVE_DOWN &mmv MOVE_LEFT>,
                 <&macro_pause_for_release>,
-                <&macro_release>;
+                <&macro_release>,
+                <&mmv MOVE_DOWN &mmv MOVE_LEFT>;
 
             label = "MACRO_DIAGONAL_DL";
         };
@@ -132,7 +135,8 @@
                 <&macro_press>,
                 <&mmv MOVE_DOWN &mmv MOVE_RIGHT>,
                 <&macro_pause_for_release>,
-                <&macro_release>;
+                <&macro_release>,
+                <&mmv MOVE_DOWN &mmv MOVE_RIGHT>;
 
             label = "MACRO_DIAGONAL_DR";
         };
