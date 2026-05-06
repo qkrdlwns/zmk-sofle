@@ -838,7 +838,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:keyboard-space$$', h: FLStudio2}
-  - '&Macro_FLStudio_key2midi'
+  - '&macro_FLStudio_key2midi'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -968,7 +968,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&Macro_FLStudio_key2midi'
+  - '&macro_FLStudio_key2midi'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -1368,3 +1368,15 @@ layers:
 combos:
 - p: [14, 28, 40]
   k: '&soft_off'
+- p: [22, 34]
+  k: '&macro_diagonal_ul'
+  l: [MouseMode]
+- p: [22, 36]
+  k: '&macro_diagonal_ur'
+  l: [MouseMode]
+- p: [34, 35]
+  k: '&macro_diagonal_dl'
+  l: [MouseMode]
+- p: [35, 36]
+  k: '&macro_diagonal_dr'
+  l: [MouseMode]
