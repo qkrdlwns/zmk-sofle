@@ -175,8 +175,8 @@
         layer_fn1 {
             bindings = <
 &trans      &kp F1        &kp F2        &kp F3             &kp F4            &kp F5            &none  &kp F6           &kp F7       &kp F8         &kp F9     &kp F10               &kp INSERT
-&trans      &sk LEFT_GUI  &sk LEFT_ALT  &sk LEFT_SHIFT     &sk LEFT_CONTROL  &kt LEFT_SHIFT    &none  &kp F11          &kp HOME     &kp UP         &kp END    &kp MINUS             &kp EQUAL
-&trans      &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT     &kp LEFT_CONTROL  &none             &none  &kp F12          &kp LEFT     &kp DOWN       &kp RIGHT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&trans      &none         &none         &none              &none             &none             &none  &kp F11          &kp HOME     &kp UP         &kp END    &kp MINUS             &kp EQUAL
+&trans      &sk LEFT_GUI  &sk LEFT_ALT  &sk LEFT_SHIFT     &sk LEFT_CONTROL  &kt LEFT_SHIFT    &none  &kp F12          &kp LEFT     &kp DOWN       &kp RIGHT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &trans      &kp ENTER     &kp SPACE     &kp K_APPLICATION  &kp LANGUAGE_1    &mo 7             &none  &kp PRINTSCREEN  &kp PAGE_UP  &kp PAGE_DOWN  &kp GRAVE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
 &kp C_MUTE  &trans        &trans        &trans             &trans            &trans            &none  &trans           &trans       &mo 3          &none      &none
             >;
@@ -200,11 +200,11 @@
 
         layer_mouse_mode {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &none      &none           &none           &none            &none     &none
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &none      &none           &mmv MOVE_UP    &none            &mkp MB5  &none
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB4  &none
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &none      &kp LC(C)       &kp LC(V)       &kp LC(Z)        &mo 5     &none
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &mkp MCLK  &mkp LCLK       &mkp RCLK       &none            &none
+&trans  &trans  &trans        &trans          &trans            &trans    &trans  &none      &none           &none           &none            &none     &none
+&trans  &trans  &trans        &trans          &trans            &trans    &trans  &none      &none           &mmv MOVE_UP    &none            &mkp MB5  &none
+&trans  &none   &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans    &trans  &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB4  &none
+&trans  &trans  &trans        &trans          &trans            &trans    &trans  &none      &kp LC(C)       &kp LC(V)       &kp LC(Z)        &mo 5     &none
+&trans  &trans  &trans        &trans          &trans            &trans    &trans  &mkp MCLK  &mkp LCLK       &mkp RCLK       &none            &none
             >;
 
             label = "MouseMode";
