@@ -298,7 +298,7 @@
 
         FLStudio1 {
             bindings = <
-&kp ESC         &trans            &trans     &trans        &trans         &trans                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp ESC         &trans            &trans     &trans        &trans         &trans                      &trans  &trans  &trans  &trans  &trans  &trans  &tog 12
 &trans          &kp LC(S)         &trans     &trans        &kp LC(LA(Z))  &kp LC(T)                   &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp DEL         &kp S             &kp C      &kp B         &kp P          &kp M                       &none   &trans  &trans  &trans  &trans  &trans  &trans
 &kp LEFT_SHIFT  &kp DEL           &kp LC(B)  &kp LC(C)     &kp LC(V)      &trans                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -336,7 +336,7 @@
 
         layer_15 {
             bindings = <
-&trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &tog 15
 &trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -366,7 +366,7 @@
 
         layer_18 {
             bindings = <
-&trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &tog 18
 &trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
