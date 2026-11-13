@@ -1,0 +1,32 @@
+config SOFLE_SCREEN
+    bool "Custom nice!view status screen (portrait 68x160)"
+    default y
+    depends on ZMK_DISPLAY_STATUS_SCREEN_CUSTOM && !NICE_VIEW_WIDGET_STATUS
+    select LV_USE_IMG
+    select LV_USE_CANVAS
+    select LV_FONT_MONTSERRAT_14
+    select LV_FONT_MONTSERRAT_16
+    select LV_FONT_MONTSERRAT_18
+    select LV_FONT_MONTSERRAT_22
+    select LV_FONT_MONTSERRAT_28
+    select LV_FONT_UNSCII_8
+    select ZMK_WPM if !ZMK_SPLIT || ZMK_SPLIT_ROLE_CENTRAL
+
+if SOFLE_SCREEN
+
+choice SOFLE_SCREEN_STYLE
+    prompt "Left-half screen style"
+    default SOFLE_SCREEN_STYLE_STACK
+
+config SOFLE_SCREEN_STYLE_STACK
+    bool "A: info stack (battery, BT profiles, layer, WPM bar)"
+
+config SOFLE_SCREEN_STYLE_LAYERS
+    bool "B: layer focus (big layer block + active layer list)"
+
+config SOFLE_SCREEN_STYLE_TYPING
+    bool "C: typing meter (big WPM + bar graph)"
+
+endchoice
+
+endif
